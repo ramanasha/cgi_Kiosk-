@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="js/html5shiv.js"></script>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/ie9.css" />
+    <link rel="stylesheet" href="css/ie8.css" />
+    <noscript><link rel="stylesheet" href="css/noscript.css" /></noscript>
+
+    <style>
+		#box {
+		    background-color: lightgrey;
+		    width: 700px;
+		    border: 25px solid green;
+		    padding: 25px;
+		    margin: 25px;
+		}
+		</style>
+
+
+</head>
+<body class="is-loading">
+
+<div id="wrapper">
+    <section id="main">
+
+        <header>
+            <b><h1>JAFFNA  PRADESHIYA SABHA</h1></b>
+            <p>Customer service Center</p>
+        </header>
+
+        <div id="box"><i class="fa fa-smile-o" style="font-size:24px">Thank you for your feed back.</i></div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <ul class="copyright">
+            <li>&copy; CGI</li><li><a href="http://web.cgilk.org">Center for Governance Innovations</a></li>
+        </ul>
+    </footer>
+
+</div>
+<script src="js/respond.min.js"></script>
+<script>
+				if ('addEventListener' in window) {
+					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+				}
+</script>
+<script>
+    window.setTimeout(function() {
+    window.location.href = "/";
+}, 5000);
+</script>
+
+</body>
+</html>

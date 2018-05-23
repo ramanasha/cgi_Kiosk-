@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html xmlns:background-color="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Jaffna customer service</title>
+    <meta charset="utf-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
+    <link href="css/layout.css" rel="stylesheet" type="text/css" media="all">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+
+</head>
+<body id="top">
+<!-- Top Background Image Wrapper -->
+<div class="bgded overlay light" style="background-image:url('img/01.png');">
+    <!-- ################################################################################################ -->
+    <div class="wrapper row1">
+        <header id="header" class="hoc clear">
+
+            <!-- ################################################################################################ -->
+        </header>
+    </div>
+    <!-- ################################################################################################ -->
+    <div id="pageintro" class="hoc clear">
+        <!-- ################################################################################################ -->
+        <div class="flexslider basicslider">
+            <ul class="slides">
+                <li>
+                    <article>
+                        <h1 class="heading"><B>Jaffna Municipal Council</B></h1>
+
+                    </article>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- ################################################################################################ -->
+</div>
+<div class="wrapper">
+
+    <div class="hoc clear">
+        <figure id="introblocks"><h1 class="heading">Please Select your Gender</h1>
+
+        <table>
+                <tr>
+
+                    <td>
+                        <center>
+                            <label>
+                                <img src="/img/male.png" hight="50%" width="50%" >
+                                <input type="radio" name="gender" value="MALE" />
+                            </label>
+                        </center>
+                                </td>
+
+                                <td>
+                        <center>
+                            <label>
+                                <img src="/img/female.png" hight="50%" width="50%" >
+                                <input type="radio" name="gender" value="FEMALE" />
+                            </label>
+                        </center>
+                                </td>
+
+                                <td>
+                        <center>
+                            <label>
+                                <img src="/img/other.png" hight="50%" width="50%" >
+                                <input type="radio" name="gender" value="OTHER" />
+                            </label>
+                        </center>
+                </td>
+            </tr>
+        </table>
+        </figure>
+
+            <ul class="nospace group">
+                <h1 class="heading">Please Share your Feedback</h1>
+                <button class="one_third first" id="hs"><img src="img/smiley icon 01.jpg" alt=""><label class="heading"><br><b>High Satisfaction</b> </label></button>
+                <button class="one_third" id="ms"><img src="img/smiley icon 02.jpg" alt=""><label class="heading"> <br><b>Medium Satisfaction</b> </label></button>
+                <button class="one_third" id="ls"><img src="img/smiley icon 03.jpg" alt=""><label class="heading"><br><b>Low Satisfaction</b> </label></button>
+            </ul>
+
+    </div>
+
+        <!-- <div id="button"><a href="login.html">Log In</a></div> -->
+
+
+
+
+        <!-- <footer id="footer">
+          <ul class="copyright">
+            <li>&copy; CGI</li><li><a href="http://web.cgilk.org">Center for Governance Innovations</a></li>
+          </ul>
+        </footer> -->
+
+
+
+        <!-- ################################################################################################ -->
+
+        <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+        <!-- JAVASCRIPTS -->
+        <script src="js/jquery.min.js"></script>
+        <!--<script src="js/jquery.main2.js"></script>-->
+       <script src="js/jquery.flexslider-min.js"></script>
+
+<script type="application/javascript">
+
+        $("button").click(function() {
+               // alert(this.id);
+
+                var responseId = this.id;
+                //var title = $( 'h1' ).find( 'B' ).text();
+                //var counter = $('h3').find('center').text();
+                var title ="JAFF1001";
+                var counter = "c9";
+
+                var gender = $('input[name=gender]:checked').val();
+
+                var dataHash  = {};
+                if(gender!=null){
+                    dataHash = {responseId:responseId,title:title,counter:counter,gender:gender};
+                } else {
+                    dataHash = {responseId:responseId,title:title,counter:counter,gender:"NULL"};
+                }
+
+                $.ajax({
+                    type:"POST",
+                    url:"/getResponse",
+                    data: dataHash,
+
+                    success: function (data) {
+                        window.location.href = "/sayThankyou";
+                    },
+                    error: function (httpRequest, textStatus, errorThrown) {
+                         alert("An Error occurred");
+                     }
+                });
+
+        });
+
+    </script>
+</body>
+</html>
