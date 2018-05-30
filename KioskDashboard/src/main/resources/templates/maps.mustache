@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+{{>layouts/header}}
+<body>
+
+<div class="wrapper">
+    {{>layouts/menu}}
+
+    <div class="main-panel">
+		{{>layouts/nav}}
+
+        <div id="map"></div>
+
+    </div>
+</div>
+
+
+</body>
+
+        <!--   Core JS Files   -->
+    <script src="js/dashboard/jquery.3.2.1.min.js" type="text/javascript"></script>
+	<script src="js/dashboard/bootstrap.min.js" type="text/javascript"></script>
+
+	<!--  Charts Plugin -->
+	<script src="js/dashboard/chartist.min.js"></script>
+
+    <!--  Notifications Plugin    -->
+    <script src="js/dashboard/bootstrap-notify.js"></script>
+
+    <!--  Google Maps Plugin    -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+
+    <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
+	<script src="js/dashboard/light-bootstrap-dashboard.js?v=1.4.0"></script>
+
+	<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
+	<script src="js/dashboard/demo.js"></script>
+
+    <script>
+        $().ready(function(){
+            demo.initGoogleMaps();
+        });
+    </script>
+
+</html>

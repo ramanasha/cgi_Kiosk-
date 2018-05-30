@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+{{>layouts/header}}
+<body>
+
+<div class="wrapper">
+    {{>layouts/menu}}
+
+    <div class="main-panel">
+        {{>layouts/nav}}
+
+
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+									<!-- pie chart start -->
+                    <!-- <div class="col-md-4">
+                        <div class="card">
+
+                            <div class="header">
+                                <h4 class="title">Email Statistics</h4>
+                                <p class="category">Last Campaign Performance</p>
+                            </div>
+                            <div class="content">
+                                <div id="chartPreferences" class="ct-chart ct-perfect-fourth"></div>
+
+                                <div class="footer">
+                                    <div class="legend">
+                                        <i class="fa fa-circle text-info"></i> Open
+                                        <i class="fa fa-circle text-danger"></i> Bounce
+                                        <i class="fa fa-circle text-warning"></i> Unsubscribe
+                                    </div>
+                                    <hr>
+                                    <div class="stats">
+                                        <i class="fa fa-clock-o"></i> Campaign sent 2 days ago
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!-- <div class="col-md-8">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Users Behavior</h4>
+                                <p class="category">24 Hours performance</p>
+                            </div>
+                            <div class="content">
+                                <div id="chartHours" class="ct-chart"></div>
+                                <div class="footer">
+                                    <div class="legend">
+                                        <i class="fa fa-circle text-info"></i> Open
+                                        <i class="fa fa-circle text-danger"></i> Click
+                                        <i class="fa fa-circle text-warning"></i> Click Second Time
+                                    </div>
+                                    <hr>
+                                    <div class="stats">
+                                        <i class="fa fa-history"></i> Updated 3 minutes ago
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+
+
+
+                <div class="col-md-10">
+                    <!-- <div class="col-md-6"> -->
+                  <!--<div class="card">-->
+                        <!--<center>
+                            <div class="header">
+                                <h4 class="title">{{localAuthority}} Pradeshita Sabha</h4>
+                                <p class="category">Admin dashboard</p>
+                            </div>
+						</center>-->
+                        <center>
+                            <div class="header">
+                                <h4 class="title">{{localAuthority}} Pradeshita Sabha</h4>
+                                <p class="category">Admin dashboard</p>
+                            </div>
+
+                            <div class="content">
+                                <div id="chartActivity" class="col-md-8">
+                                    <canvas id="canvas" height="100" width="100"></canvas>
+                                </div>
+                                <div id="getResultDiv" style="margin:10px 10px 10px 15px;">
+                                    <ul class="list-group">
+                                    </ul>
+                                </div>
+
+
+
+                                <!--<div class="footer">
+                                    <div class="legend">
+                                        <i class="fa fa-circle text-info"></i> High Satisfaction</br>
+                                        <i class="fa fa-circle text-danger"></i> Medium Satisfaction</br>
+										<i class="fa fa-circle text-warning"></i> Low Satisfaction</br>
+                                    </div>
+                                    <hr>
+                                    <div class="stats">
+                                        &lt;!&ndash;<i class="fa fa-check"></i> Data information certified&ndash;&gt;
+                                    </div>
+                                </div>-->
+                            </div>
+                        </center>
+                        <!--</div>-->
+                    <!-- </div> -->
+
+                    <!-- <div class="col-md-6">
+                        <div class="card ">
+                            <div class="header">
+                                <h4 class="title">Tasks</h4>
+                                <p class="category">Backend development</p>
+                            </div>
+                            <div class="content">
+                                <div class="table-full-width">
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+													<div class="checkbox">
+						  							  	<input id="checkbox1" type="checkbox">
+						  							  	<label for="checkbox1"></label>
+					  						  		</div>
+                                                </td>
+                                                <td>Sign contract for "What are conference organizers afraid of?"</td>
+                                                <td class="td-actions text-right">
+                                                    <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
+                                                        <i class="fa fa-edit"></i>
+                                                    </button>
+                                                    <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+                                                        <i class="fa fa-times"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+													<div class="checkbox">
+						  							  	<input id="checkbox2" type="checkbox" checked>
+						  							  	<label for="checkbox2"></label>
+					  						  		</div>
+                                                </td>
+                                                <td>Lines From Great Russian Literature? Or E-mails From My Boss?</td>
+                                                <td class="td-actions text-right">
+                                                    <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
+                                                        <i class="fa fa-edit"></i>
+                                                    </button>
+                                                    <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+                                                        <i class="fa fa-times"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+													<div class="checkbox">
+						  							  	<input id="checkbox3" type="checkbox">
+						  							  	<label for="checkbox3"></label>
+					  						  		</div>
+                                                </td>
+                                                <td>Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit
+												</td>
+                                                <td class="td-actions text-right">
+                                                    <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
+                                                        <i class="fa fa-edit"></i>
+                                                    </button>
+                                                    <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+                                                        <i class="fa fa-times"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+													<div class="checkbox">
+						  							  	<input id="checkbox4" type="checkbox" checked>
+						  							  	<label for="checkbox4"></label>
+					  						  		</div>
+                                                </td>
+                                                <td>Create 4 Invisible User Experiences you Never Knew About</td>
+                                                <td class="td-actions text-right">
+                                                    <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
+                                                        <i class="fa fa-edit"></i>
+                                                    </button>
+                                                    <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+                                                        <i class="fa fa-times"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+													<div class="checkbox">
+						  							  	<input id="checkbox5" type="checkbox">
+						  							  	<label for="checkbox5"></label>
+					  						  		</div>
+                                                </td>
+                                                <td>Read "Following makes Medium better"</td>
+                                                <td class="td-actions text-right">
+                                                    <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
+                                                        <i class="fa fa-edit"></i>
+                                                    </button>
+                                                    <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+                                                        <i class="fa fa-times"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+													<div class="checkbox">
+						  							  	<input id="checkbox6" type="checkbox" checked>
+						  							  	<label for="checkbox6"></label>
+					  						  		</div>
+                                                </td>
+                                                <td>Unfollow 5 enemies from twitter</td>
+                                                <td class="td-actions text-right">
+                                                    <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
+                                                        <i class="fa fa-edit"></i>
+                                                    </button>
+                                                    <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+                                                        <i class="fa fa-times"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="footer">
+                                    <hr>
+                                    <div class="stats">
+                                        <i class="fa fa-history"></i> Updated 3 minutes ago
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+
+        {{>layouts/footer}}
+
+    </div>
+</div>
+
+
+</body>
+
+
+
+
+
+    <!--   Core JS Files   -->
+    <script src="js/dashboard/jquery.3.2.1.min.js" type="text/javascript"></script>
+	<script src="js/dashboard/bootstrap.min.js" type="text/javascript"></script>
+
+	<!--  Charts Plugin -->
+	<script src="js/dashboard/chartist.min.js"></script>
+
+    <!--  Notifications Plugin    -->
+    <script src="js/dashboard/bootstrap-notify.js"></script>
+
+    <!--  Google Maps Plugin    -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+
+    <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
+	<script src="js/dashboard/light-bootstrap-dashboard.js"></script>
+    <script type="text/javascript" src="js/Chart.min.js"></script>
+    <script type="text/javascript" src="js/Chart.js"></script>
+
+	<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
+	<script src="js/dashboard/demo.js"></script>
+
+	<script type="text/javascript">
+
+	$(document).ready(function(){
+	    $.ajax({
+	        type: "GET",
+	        url:  "/getSummary",
+	        success: function(result){
+				if(result.status == "Done"){
+				$('#getResultDiv ul').empty();
+					var counterId = [];
+					var hsCount = [];
+					var msCount = [];
+					var lsCount = [];
+					$.each(result.data, function(i,summary){
+						counterId.push(summary.counterId);
+						hsCount.push(summary.hsCount);
+						msCount.push(summary.msCount);
+						lsCount.push(summary.lsCount);
+			        });
+					console.log("Success: ", result);
+					var densityCanvas = document.getElementById('canvas').getContext('2d');
+
+                     var barChart =
+                        new Chart(densityCanvas, {
+                                 type: 'bar',
+                                 data:{
+                                     labels: counterId,
+                                     datasets: [
+                                         {
+                                          label: 'High Satisfaction',
+                                          data: hsCount,
+                                          backgroundColor: 'rgba(0, 99, 132, 0.6)',
+                                          borderColor: 'rgba(0, 99, 132, 1)'
+                                         }, {
+                                          label: 'Medium Satisfaction',
+                                          data: msCount,
+                                          backgroundColor: 'rgba(99, 132, 0, 0.6)',
+                                          borderColor: 'rgba(99, 132, 0, 1)'
+                                         },
+                                         {
+                                         label: 'Low Satisfaction',
+                                         data: lsCount,
+                                         backgroundColor: 'rgba(179,11,198,.2)',
+                                         borderColor: 'rgba(179,11,198,1)'
+                                         }
+                                     ]
+                                    },
+                        options: {
+                                 responsive: true,
+                                 barPercentage: 1.0,
+                                 categoryPercentage: 1.0,
+                                 /*title: {
+                                      display: true,
+                                      text: 'Summary of Responses'
+
+                                 },*/
+                                scales: {
+					                xAxes: [{
+					                     categorySpacing: 100,
+						                 scaleLabel: {
+							                display: true,
+							                labelString: 'Counter'
+						                 }
+					                }],
+					                yAxes: [{
+						                scaleLabel: {
+						                     type:"linear",
+							                 display: true,
+							                 labelString: 'Response Count'
+						                }
+					                }]
+				                }
+                         }
+
+                  });
+
+				}else{
+					$("#getResultDiv").html("<strong>An Error Occurred</strong>");
+					//console.log("Fail: ", result);
+				}
+			},
+			error : function(e) {
+				$("#getResultDiv").html("<strong>An Error Occurred</strong>");
+				//console.log("ERROR: ", e);
+			}
+	    });
+	});
+	</script>
+
+</html>
